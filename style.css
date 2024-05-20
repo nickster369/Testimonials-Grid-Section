@@ -1,20 +1,25 @@
-html, body, .bodyContainer{
+html, body, .bodyContainer {
   margin: 0;
   padding: 0;
   font-family: arial, sans-serif;
 }
 
-body{
-  height:100vh;
+body {
+  height: 100vh;
   justify-content: center;
   display: flex;
   align-items: center;
   background-color: grey;
 }
 
-.bodyContainer{
- height: 50vh;
+.bodyContainer {
+  height: 50vh;
   width: 50vw;
   background-color: white;
   border-radius: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
