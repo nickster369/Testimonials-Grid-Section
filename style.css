@@ -1,7 +1,7 @@
 html, body, .bodyContainer {
   margin: 0;
   padding: 0;
-  font-family: arial, sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 body {
@@ -9,17 +9,143 @@ body {
   justify-content: center;
   display: flex;
   align-items: center;
-  background-color: grey;
-}
+  background-color: hsl(210, 46%, 95%);
 
-.bodyContainer {
-  height: 50vh;
-  width: 50vw;
-  background-color: white;
-  border-radius: 20px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns:  1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "box1 box1 box2 box3"
+    "box4 box5 box5 box3";
+  gap: 20px;
+  width: 80%;
+
 }
+
+.boxes {
+ height: auto;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.box1 {
+  grid-area: box1;
+  background-color: hsl(263, 55%, 52%);
+}
+
+.box2 {
+  grid-area: box2;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.box3 {
+  grid-area: box3;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.box4 {
+  grid-area: box4;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.box5 {
+  grid-area: box5;
+  background-color: hsl(219, 29%, 14%);
+
+}
+
+.boxContent {
+  padding: 20px;
+
+}
+
+img {
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+}
+
+h1 {
+  font-size: 18px;
+
+}
+
+h4 {
+  font-size: 14px;
+  opacity: 50%;
+}
+
+h1, h4 {
+  margin: 0 0 0 10px;
+  color: hsl(0, 0%, 81%);
+}
+
+.tweet {
+  padding: 20px 10px;
+
+}
+
+span {
+  font-weight: 600;
+  font-size: 24px;
+
+}
+
+p {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 100%;
+
+  }
+
+  .bodyContainer {
+    height: 100%;
+    width: 80%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Change to one column */
+    grid-template-rows: auto; /* Let rows adjust based on content */
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "box5"; /* Each box will stack vertically */
+
+  }
+
+  .boxes {
+    height: auto; /* Allow boxes to adjust their height based on content */
+    width: 100%;
+  }
+}
+
+@media (max-width: 1920px) {
+  .grid {
+    width: 100%;
+
+  }
+
+
+}
+
+@media (max-width: 1919px) {
+  body {
+    height: auto;
+  }
+
+}
+
